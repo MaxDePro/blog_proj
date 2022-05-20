@@ -1,0 +1,10 @@
+{% extends 'main/index.html' %}
+
+{% block content %}
+    <h1 class="mb-5">
+        Posts with "{{ tag.title|title }}" tag
+    </h1>
+    {% for post in tag.posts.all %}
+        {% include 'main/includes/post_card.html' %}
+    {% endfor %}
+{% endblock %}
